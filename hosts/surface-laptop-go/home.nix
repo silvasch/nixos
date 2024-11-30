@@ -7,6 +7,9 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ../../modules/home/firefox.nix
+    ../../modules/home/fish.nix
     ../../modules/home/helix.nix
+    ../../modules/home/zoxide.nix
   ];
 }

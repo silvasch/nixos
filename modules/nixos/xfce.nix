@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services.xserver = {
@@ -10,4 +10,6 @@
       variant = "";
     };
   };
+
+  environment.systemPackages = with pkgs; [ papirus-icon-theme ];
 }
