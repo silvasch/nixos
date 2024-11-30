@@ -14,7 +14,7 @@
     ../../modules/nixos/networking.nix
     ../../modules/nixos/printing.nix
     ../../modules/nixos/system_packages.nix
-    ../../modules/nixos/users.nix
+    ../../modules/nixos/users
     ../../modules/nixos/xfce.nix
   ];
 }
