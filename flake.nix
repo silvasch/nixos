@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
@@ -10,25 +11,42 @@
     };
   };
 
-  outputs = { home-manager, nixpkgs, ... }: 
+  outputs =
+    {
+      home-manager,
+      nixpkgs,
+      nixpkgs-unstable,
+      ...
+    }:
     let
       system = "x86_64-linux";
-    in {
+
+      overlay-unstable = final: prev: { unstable = nixpkgs-unstable.legacyPackages.${prev.system}; };
+    in
+    {
       nixosConfigurations.surface-laptop-go = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
+          (
+            { ... }:
+            {
+              nixpkgs.overlays = [ overlay-unstable ];
+            }
+          )
+
           ./hosts/surface-laptop-go/configuration.nix
           ./hosts/surface-laptop-go/hardware-configuration.nix
 
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.silva = { ... }: {
-              imports = [
-                ./hosts/surface-laptop-go/home.nix
-              ];
-            };
+            home-manager.users.silva =
+              { ... }:
+              {
+                imports = [ ./hosts/surface-laptop-go/home.nix ];
+              };
           }
         ];
       };

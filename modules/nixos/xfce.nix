@@ -11,5 +11,5 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [ papirus-icon-theme ];
+  environment.systemPackages = with pkgs; [ papirus-icon-theme xfce.thunar-archive-plugin ];
 }
