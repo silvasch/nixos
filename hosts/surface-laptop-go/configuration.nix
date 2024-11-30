@@ -9,11 +9,7 @@
     ./hardware-configuration.nix
 
     ../../modules/nixos/audio.nix
-    ../../modules/nixos/bootloader.nix
-    ../../modules/nixos/locale.nix
-    ../../modules/nixos/networking.nix
-    ../../modules/nixos/printing.nix
-    ../../modules/nixos/system_packages.nix
+    ../../modules/nixos/base
     ../../modules/nixos/users
     ../../modules/nixos/xfce.nix
   ];
