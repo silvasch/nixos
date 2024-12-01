@@ -12,6 +12,7 @@
     ../../modules/home/fish.nix
     ../../modules/home/fonts
     ../../modules/home/helix.nix
+    ../../modules/home/openvpn.nix
     ../../modules/home/nix_language.nix
     ../../modules/home/starship.nix
     ../../modules/home/zed.nix
