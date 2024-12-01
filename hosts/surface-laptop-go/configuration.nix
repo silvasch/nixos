@@ -1,8 +1,8 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   networking.hostName = "surface-laptop-go";
-  system.stateVersion = "24.05";
+  system.stateVersion = "24.11";
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   imports = [
