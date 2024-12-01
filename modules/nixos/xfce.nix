@@ -15,5 +15,6 @@
     papirus-icon-theme
     xfce.thunar-archive-plugin
     mate.atril
+    xarchiver
   ];
 }
