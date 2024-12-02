@@ -20,7 +20,7 @@
     ../../modules/home/pkgs/nmap.nix
     ../../modules/home/pkgs/openvpn.nix
     ../../modules/home/pkgs/nix_language.nix
-    ../../modules/home/pkgs/seclists.nix
+    ../../modules/home/pkgs/wordlists.nix
     ../../modules/home/pkgs/starship.nix
     ../../modules/home/pkgs/wireshark.nix
     ../../modules/home/pkgs/zed.nix
