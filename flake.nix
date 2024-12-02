@@ -9,6 +9,11 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -16,6 +21,7 @@
       home-manager,
       nixpkgs,
       nixpkgs-unstable,
+      sops-nix,
       ...
     }:
     let
@@ -26,6 +32,7 @@
     {
       nixosConfigurations.surface-laptop-go = nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = { sops-nix = sops-nix; };
         modules = [
           (
             { ... }:

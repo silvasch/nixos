@@ -1,0 +1,7 @@
+keys:
+  - &silva age15taghq27wzsck9c85kcuq4rw5fr9tt7m40mrgnfzkysaaw0j3arqtq5gh2
+creation_rules:
+  - path_regex: secrets.yaml
+    key_groups:
+      - age:
+        - *silva

@@ -10,6 +10,7 @@
 
     ../../modules/nixos/audio.nix
     ../../modules/nixos/base
+    ../../modules/nixos/sops.nix
     ../../modules/nixos/users
     ../../modules/nixos/xfce.nix
   ];
