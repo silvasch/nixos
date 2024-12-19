@@ -14,6 +14,11 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    vyder = {
+      url = "gitlab:vyder/vyder/v0.3.4";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -23,11 +28,13 @@
       nixpkgs-unstable,
       sops-nix,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
 
       overlay-unstable = final: prev: { unstable = nixpkgs-unstable.legacyPackages.${prev.system}; };
+
+      overlay-vyder = final: prev: { vyder = inputs.vyder.packages.${prev.system}.default; };
     in
     {
       nixosConfigurations.surface-laptop-go = nixpkgs.lib.nixosSystem {
@@ -37,7 +44,7 @@
           (
             { ... }:
             {
-              nixpkgs.overlays = [ overlay-unstable ];
+              nixpkgs.overlays = [ overlay-unstable overlay-vyder ];
             }
           )
 

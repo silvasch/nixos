@@ -20,6 +20,7 @@
     ../../modules/home/pkgs/openvpn.nix
     ../../modules/home/pkgs/nix_language.nix
     ../../modules/home/pkgs/starship.nix
+    ../../modules/home/pkgs/vyder.nix
     ../../modules/home/pkgs/zed.nix
     ../../modules/home/pkgs/zoxide.nix
   ];
