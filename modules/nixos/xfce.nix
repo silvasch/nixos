@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./audio.nix
+    ./bluetooth.nix
+  ];
+
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = true;
@@ -12,6 +17,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    blueman
     papirus-icon-theme
     xfce.thunar-archive-plugin
     mate.atril
