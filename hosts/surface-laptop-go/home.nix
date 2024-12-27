@@ -31,4 +31,10 @@
     ../../modules/home/pkgs/zed.nix
     ../../modules/home/pkgs/zoxide.nix
   ];
+
+  silvnix.git = {
+    enable = true;
+    fullName = "Silvan Schmidt";
+    email = "mail@silvanschmidt.ch";
+  };
 }
