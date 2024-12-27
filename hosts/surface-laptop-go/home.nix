@@ -14,6 +14,7 @@
     ../../modules/home/pkgs/firefox.nix
     ../../modules/home/pkgs/fish.nix
     ../../modules/home/pkgs/fonts
+    ../../modules/home/pkgs/git.nix
     ../../modules/home/pkgs/godot.nix
     ../../modules/home/pkgs/helix.nix
     ../../modules/home/pkgs/jq.nix
