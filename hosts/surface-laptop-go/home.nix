@@ -18,6 +18,7 @@
     ../../modules/home/pkgs/godot.nix
     ../../modules/home/pkgs/helix.nix
     ../../modules/home/pkgs/jq.nix
+    ../../modules/home/pkgs/kitty.nix
     ../../modules/home/pkgs/openvpn.nix
     ../../modules/home/pkgs/nix_language.nix
     ../../modules/home/pkgs/musescore.nix
