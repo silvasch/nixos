@@ -11,6 +11,7 @@
   
     ../../modules/home/pkgs/blender.nix
     ../../modules/home/pkgs/cava.nix
+    ../../modules/home/pkgs/delta.nix
     ../../modules/home/pkgs/direnv.nix
     ../../modules/home/pkgs/fastfetch.nix
     ../../modules/home/pkgs/firefox.nix
