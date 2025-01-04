@@ -7,6 +7,10 @@
       font_family = "JetBrainsMono Nerd Font Mono";
 
       shell = "fish";
+
+      tab_bar_style = "powerline";
+      tab_powerline_style = "round";
+      window_padding_width = 4;
     };
     keybindings = {
       "ctrl+shift+1" = "change_font_size all +2.0";
