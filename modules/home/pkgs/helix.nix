@@ -30,7 +30,17 @@
         }
         {
           name = "nix";
-          formatter = { command = "nixfmt"; };
+          formatter = {
+            command = "nixfmt";
+          };
+          auto-format = true;
+        }
+        {
+          name = "lua";
+          formatter = {
+            command = "stylua";
+            args = [ "-" ];
+          };
           auto-format = true;
         }
       ];
