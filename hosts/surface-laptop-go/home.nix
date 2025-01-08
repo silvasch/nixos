@@ -8,7 +8,7 @@
 
   imports = [
     ../../modules/home/collections/cybersec.nix
-  
+
     ../../modules/home/pkgs/blender.nix
     ../../modules/home/pkgs/cava.nix
     ../../modules/home/pkgs/delta.nix
@@ -24,9 +24,10 @@
     ../../modules/home/pkgs/jq.nix
     ../../modules/home/pkgs/kitty.nix
     ../../modules/home/pkgs/openvpn.nix
-    ../../modules/home/pkgs/nix_language.nix
     ../../modules/home/pkgs/musescore.nix
+    ../../modules/home/pkgs/nix_language.nix
     ../../modules/home/pkgs/starship.nix
+    ../../modules/home/pkgs/tmux.nix
     ../../modules/home/pkgs/vyder.nix
     ../../modules/home/pkgs/zed.nix
     ../../modules/home/pkgs/zoxide.nix
