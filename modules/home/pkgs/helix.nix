@@ -1,8 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.helix = {
     enable = true;
+    package = pkgs.unstable.helix;
     settings = {
       theme = "adwaita-dark";
       editor = {
@@ -15,6 +16,10 @@
         };
         lsp.display-inlay-hints = true;
         auto-format = true;
+        end-of-line-diagnostics = "hint";
+        inline-diagnostics = {
+          cursor-line = "error";
+        };
       };
     };
     languages = {
