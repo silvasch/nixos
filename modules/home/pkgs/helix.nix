@@ -29,9 +29,16 @@
         {
           name = "java";
           indent = {
-            tab-width = 4;
-            unit = "    ";
+            tab-width = 2;
+            unit = "  ";
           };
+          formatter = {
+            command = "google-java-format";
+            args = [
+              "-"
+            ];
+          };
+          auto-format = true;
         }
         {
           name = "nix";
