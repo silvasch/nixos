@@ -15,6 +15,8 @@
     ../../modules/nixos/sops.nix
     ../../modules/nixos/users
 
+    ../../modules/nixos/docker.nix
+
     ../../modules/nixos/opengl.nix
 
     ../../modules/nixos/xfce.nix
