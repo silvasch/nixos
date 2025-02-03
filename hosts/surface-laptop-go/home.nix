@@ -18,6 +18,7 @@
     ../../modules/home/pkgs/fish.nix
     ../../modules/home/pkgs/fonts
     ../../modules/home/pkgs/fzf.nix
+    ../../modules/home/pkgs/gimp.nix
     ../../modules/home/pkgs/git.nix
     ../../modules/home/pkgs/godot.nix
     ../../modules/home/pkgs/helix.nix
