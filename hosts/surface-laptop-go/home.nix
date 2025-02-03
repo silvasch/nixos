@@ -31,6 +31,7 @@
     ../../modules/home/pkgs/tmux.nix
     ../../modules/home/pkgs/vyder.nix
     ../../modules/home/pkgs/zed.nix
+    ../../modules/home/pkgs/zen.nix
     ../../modules/home/pkgs/zoxide.nix
   ];
 

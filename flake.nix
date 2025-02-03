@@ -19,6 +19,11 @@
       url = "gitlab:vyder/vyder/v0.3.4";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -35,16 +40,24 @@
       overlay-unstable = final: prev: { unstable = nixpkgs-unstable.legacyPackages.${prev.system}; };
 
       overlay-vyder = final: prev: { vyder = inputs.vyder.packages.${prev.system}.default; };
+
+      overlay-zen = final: prev: { zen = inputs.zen.packages.${prev.system}.default; };
     in
     {
       nixosConfigurations.surface-laptop-go = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { sops-nix = sops-nix; };
+        specialArgs = {
+          sops-nix = sops-nix;
+        };
         modules = [
           (
             { ... }:
             {
-              nixpkgs.overlays = [ overlay-unstable overlay-vyder ];
+              nixpkgs.overlays = [
+                overlay-unstable
+                overlay-vyder
+                overlay-zen
+              ];
             }
           )
 
